@@ -7,6 +7,7 @@ const submitEl = document.getElementById("submit")
 //outputs
 const listContainer = document.getElementById("list-container")
 const balanceContainer = document.getElementById("balance")
+const alertEl = document.getElementById("alert")
 //global variable
 let items = [
     { id: 1, transaction: "Dress", amount: -420 },
@@ -33,13 +34,14 @@ const getData = (item) => {
 
 const listTemplate = (item) => {
     const { id, transaction, amount } = item
+    const type = amount > 0 ? "plus" : "minus";
     const list = document.createElement("div")
     list.classList.add("list")
-    list.innerHTML = `<span>
+    list.innerHTML = `<span class="${type}">
     <h4>${transaction}</h4>
-    <p>${amount}</p>
+    <p>${amount.toFixed(2)}</p>
     </span>
-    <button onClick="deleteRow(${id})">Delete</button>
+    <button onClick="deleteRow(${id})" class='btn'>Delete</button>
     `
     listContainer.appendChild(list)
 }
@@ -66,20 +68,24 @@ const balanceTemplate = () => {
     console.log(Number(positiveItems))
     console.log(balance)
 
-    balanceContainer.innerHTML = `<p class="balance-amount">Balance: ${Number(balance)}</p> 
-    <p class="expense-amount">Expenses: ${negativeItems}</p>`
+    balanceContainer.innerHTML = `<p class="balance-amount">Balance: ${balance.toFixed(2)}</p> 
+    <p class="expense-amount">Expenses: ${negativeItems.toFixed(2)}</p>`
 }
 
 const nullishValue = () => {
     transactionEl.value = null
     amountEl.value = null
-    transactionTrackerEl.value = null
+    transactionTrackerEl.value = "Select your action"
+}
+
+const toast = () => {
+    alertEl.style.display = "block"
 }
 
 //events
 submitEl.addEventListener("click", () => {
     const transaction = transactionEl.value;
-    const amount = amountEl.value;
+    const amount = Number(amountEl.value);
     const tracker = transactionTrackerEl.value;
 
     if (tracker === "expense") {
@@ -97,6 +103,9 @@ submitEl.addEventListener("click", () => {
     console.log(items)
     balanceTemplate()
     nullishValue()
+    setTimeout(() => {
+        toast()
+    }, 3000);
     getData(items)
 
 })

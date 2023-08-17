@@ -1,1 +1,3 @@
-Bolier Plate which is gonna use for all the pojects from here this all files and contents are important to use every time so we predifined them now for preventing us from rework.
+User Details form with basic details.
+
+Visit URL : https://janarthanan2107.github.io/UserDetailsForm/

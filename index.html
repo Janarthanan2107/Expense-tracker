@@ -19,6 +19,9 @@
   </head>
 
   <body>
+    <div class="alert success" id="alert">
+      Transaction added
+    </div>
     <div class="container">
       <div class="card">
         <h2>Expense Transaction</h2>
@@ -43,12 +46,12 @@
             <label for="amount">Amount</label>
             <input type="number" name="amount" class="input" id="amount" />
           </div>
-          <select name="tracker" id="transaction-tracker" class="input">
+          <select name="tracker" id="transaction-tracker" class="input" aria-placeholder="Select your action">
             <option selected disabled>Select your action</option>
             <option value="transaction">Transaction</option>
             <option value="expense">Expense</option>
           </select>
-          <button id="submit" type="submit">Submit</button>
+          <button id="submit" type="submit" class="btn">Submit</button>
         </div>
       </div>
     </div>
