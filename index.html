@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <!-- normalized css -->
+    <link rel="stylesheet" href="./style/normalized.css" />
+    <!-- fontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Customized css -->
+    <link rel="stylesheet" href="./style/customized.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>Expense Transaction</h2>
+        <div id="balance" class="balance">
+          <!-- balance and expense gonna display here -->
+        </div>
+        <div class="list-container" id="list-container">
+          <!-- all list gonna display here -->
+        </div>
+        <br />
+        <div class="form">
+          <div class="form-control">
+            <label for="transaction">Transaction</label>
+            <input
+              type="text"
+              name="transaction"
+              class="input"
+              id="transaction"
+            />
+          </div>
+          <div class="form-control">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" class="input" id="amount" />
+          </div>
+          <select name="tracker" id="transaction-tracker" class="input">
+            <option selected disabled>Select your action</option>
+            <option value="transaction">Transaction</option>
+            <option value="expense">Expense</option>
+          </select>
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
