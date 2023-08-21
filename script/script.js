@@ -53,7 +53,7 @@ const getData = (item) => {
   });
 };
 
-const makeTransactionCaps = (str) => str.charAt(0) + str.slice(1);
+const makeTransactionCaps = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 const makeCommonAmount = (str) => {
   if (str.charAt(0) === "-") {
     return str.slice(1);
