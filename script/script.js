@@ -84,7 +84,7 @@ const deleteRow = (id) => {
   delToast();
   setTimeout(() => {
     toastHide();
-  }, 3000);
+  }, 2000);
   getData(items);
   balanceTemplate(items);
 };
@@ -144,7 +144,7 @@ submitEl.addEventListener("click", () => {
   successToast();
   setTimeout(() => {
     toastHide();
-  }, 3000);
+  }, 2000);
   getData(items);
 });
 
