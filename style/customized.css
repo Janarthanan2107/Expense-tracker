@@ -61,14 +61,16 @@ a {
 }
 
 h2 {
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .balance {
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 1.5rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 0px var(--clr-Transparent-Soft-violet);
 }
 
 .list {
@@ -76,14 +78,17 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding: 0.4rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px 0px var(--clr-Transparent-Soft-violet);
 }
 
 .form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-top: 10px;
 }
 
 .form-control {
@@ -94,23 +99,50 @@ h2 {
 }
 
 .input {
-    height: 35px;
-    border-radius: 5px;
-    border: 0.2px solid gray;
+    height: 38px;
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 0.1px solid rgba(128, 128, 128, 0.444);
 }
 
 .btn {
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
-    background-color: var(--Bright-Blue);
-    color: white
+    background-color: hsl(224deg 34.89% 38.61%);
+    color: white;
+    cursor: pointer;
+}
+
+.del {
+    background-color: rgba(255, 0, 0, 0.64);
 }
 
 .card {
-    background-color: white;
+    /* background-color: white; */
     padding: 1rem;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.card b {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.card .card-header p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .list-container .list span {
@@ -128,21 +160,46 @@ h2 {
 .balance-amount {
     color: rgb(21, 201, 141);
     font-weight: 600;
+    padding: 1.2rem;
+    border-right: 0.3px solid rgba(128, 128, 128, 0.489);
 }
 
 .expense-amount {
     color: rgba(201, 21, 21, 0.725);
     font-weight: 600;
+    padding: 1.2rem;
 }
 
 .alert {
     padding: 1rem;
-    display: none;
     margin-top: 10px;
+    display: none;
     position: absolute;
     border-radius: 10px;
+    top: 1.5rem;
+    right: 1rem;
+}
+
+.alert i {
+    font-size: 1.3rem;
 }
 
 .alert.success {
-    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #daf2e8;
+    border-left: 8px solid #1ea97c;
+    color: #1ea97c;
+    min-width: 250px;
+}
+
+.alert.danger{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f2dada;
+    border-left: 8px solid #a91e1e;
+    color: #a91e1e;
+    min-width: 250px;
 }

@@ -19,19 +19,22 @@
   </head>
 
   <body>
-    <div class="alert success" id="alert">
-      Transaction added
+    <div class="alert" id="alert">
+      <!-- content to be added from js -->
     </div>
     <div class="container">
       <div class="card">
-        <h2>Expense Transaction</h2>
+        <div class="card-header">
+          <h2><i class="fa-solid fa-money-bill-transfer"></i> Expense Transaction</h2>
+          <p>Track your daily expense and transaction using us.</p>
+        </div>
         <div id="balance" class="balance">
           <!-- balance and expense gonna display here -->
         </div>
+        <b>Your Expenses and Transactions are:</b>
         <div class="list-container" id="list-container">
           <!-- all list gonna display here -->
         </div>
-        <br />
         <div class="form">
           <div class="form-control">
             <label for="transaction">Transaction</label>
@@ -46,9 +49,9 @@
             <label for="amount">Amount</label>
             <input type="number" name="amount" class="input" id="amount" />
           </div>
-          <select name="tracker" id="transaction-tracker" class="input" aria-placeholder="Select your action">
+          <select name="tracker" id="transaction-tracker" class="input" aria-placeholder="Select your action" style="height: 40px;">
             <option selected disabled>Select your action</option>
-            <option value="transaction">Transaction</option>
+            <option value="transaction">Income</option>
             <option value="expense">Expense</option>
           </select>
           <button id="submit" type="submit" class="btn">Submit</button>
